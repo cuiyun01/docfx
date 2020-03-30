@@ -33,6 +33,16 @@ steps:
     arguments: '.\node_modules\gulp\bin\gulp.js dev:release'
     workingFolder: tools/Deployment
 
+- task: EsrpCodeSigning@1
+  inputs:
+    ConnectedServiceName: 'nuget'
+    FolderPath: 'target\Release\docfx'
+    Pattern: '*.dll,*.exe'
+    signConfigType: 'inlineSignParams'
+    SessionTimeout: '60'
+    MaxConcurrency: '50'
+    MaxRetryAttempts: '5'
+
 - task: PublishBuildArtifacts@1
   condition: always()
   inputs:
