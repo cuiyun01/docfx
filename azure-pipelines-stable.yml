@@ -30,15 +30,15 @@ steps:
   displayName: 'gulp build'
   inputs:
     filename: node
-    arguments: '.\node_modules\gulp\bin\gulp.js dev:release'
+    arguments: '.\node_modules\gulp\bin\gulp.js dev'
     workingFolder: tools/Deployment
 
 - task: EsrpCodeSigning@1
   inputs:
     ConnectedServiceName: 'nuget'
     FolderPath: 'target\Release\docfx'
-    Pattern: '*.dll,*.exe'
-    signConfigType: 'inlineSignParams'
+    signType: 'batchSigning'
+    batchSignPolicyFile: 'CodeSign.json'
     SessionTimeout: '60'
     MaxConcurrency: '50'
     MaxRetryAttempts: '5'
