@@ -10,7 +10,7 @@
         "Operations": [
           {
             "KeyCode": "CP-230012",
-            "OperationCode": "SigntoolSign",
+            "OperationSetCode": "SigntoolSign",
             "parameters": [
               {
                 "parameterName": "OpusName",
