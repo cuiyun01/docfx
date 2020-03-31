@@ -42,7 +42,7 @@
           },
           {
             "KeyCode": "CP-230012",
-            "OperationCode": "SigntoolVerify",
+            "OperationSetCode": "SigntoolVerify",
             "Parameters": [
               {
                 "parameterName": "VerifyAll",
