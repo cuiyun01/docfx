@@ -58,10 +58,3 @@ steps:
       ]
      
     SessionTimeout: 20
-
-- task: CmdLine@1
-  displayName: 'gulp release'
-  inputs:
-    filename: node
-    arguments: '.\node_modules\gulp\bin\gulp.js master:release'
-    workingFolder: tools/Deployment
