@@ -4,7 +4,7 @@
   "SignBatches": [
     {
       "MatchedPath": [
-        "*.exe"
+        "*.exe|*.dll"
       ],
       "SigningInfo": {
         "Operations": [
