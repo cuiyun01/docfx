@@ -17,11 +17,5 @@ steps:
 - task: PublishBuildArtifacts@1
   condition: always()
   inputs:
-    pathtoPublish: 'target\Release\docfx'
+    pathtoPublish: 'sign'
     artifactName: target
-
-- task: PublishBuildArtifacts@1
-  condition: always()
-  inputs:
-    pathtoPublish: 'test\docfx-seed\_site'
-    artifactName: docfx-seed-site
