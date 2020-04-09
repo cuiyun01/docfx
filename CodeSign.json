@@ -9,7 +9,7 @@
       "SigningInfo": {
         "Operations": [
           {
-            "KeyCode": "CP-230012",
+            "KeyCode": "CP-401405",
             "OperationSetCode": "SigntoolSign",
             "parameters": [
               {
@@ -41,7 +41,7 @@
             "ToolVersion": "1.0"
           },
           {
-            "KeyCode": "CP-230012",
+            "KeyCode": "CP-401405",
             "OperationSetCode": "SigntoolVerify",
             "Parameters": [
               {
