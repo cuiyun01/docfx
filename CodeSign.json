@@ -1,60 +1,105 @@
 {
-  "Version": "1.0.0",
-  "UseMinimatch": false,
-  "SignBatches": [
-    {
-      "MatchedPath": [
-        "*.exe",
-        "*.dll"
-      ],
-      "SigningInfo": {
-        "Operations": [
-          {
-            "KeyCode": "CP-230012",
-            "OperationSetCode": "SigntoolSign",
-            "parameters": [
-              {
-                "parameterName": "OpusName",
-                "parameterValue": "Microsoft"
-              },
-              {
-                "parameterName": "OpusInfo",
-                "parameterValue": "http://www.microsoft.com"
-              },
-              {
-                "parameterName": "Append",
-                "parameterValue": "/as"
-              },
-              {
-                "parameterName": "PageHash",
-                "parameterValue": "/NPH"
-              },
-              {
-                "parameterName": "FileDigest",
-                "parameterValue": "/fd sha256"
-              },
-              {
-                "parameterName": "TimeStamp",
-                "parameterValue": "/tr \"http://rfc3161.gtm.corp.microsoft.com/TSS/HttpTspServer\" /td sha256"
-              }
+    "Version": "1.0.0",
+    "UseMinimatch": false,
+    "SignBatches": [
+        {
+            "MatchedPath": [
+                "*.exe",
+                "*.dll"
             ],
-            "ToolName": "sign",
-            "ToolVersion": "1.0"
-          },
-          {
-            "KeyCode": "CP-230012",
-            "OperationSetCode": "SigntoolVerify",
-            "Parameters": [
-              {
-                "parameterName": "VerifyAll",
-                "parameterValue": "/all"
-              }
+            "SigningInfo": {
+                "Operations": [
+                    {
+                        "KeyCode": "CP-230012",
+                        "OperationSetCode": "SigntoolSign",
+                        "parameters": [
+                            {
+                                "parameterName": "OpusName",
+                                "parameterValue": "Microsoft"
+                            },
+                            {
+                                "parameterName": "OpusInfo",
+                                "parameterValue": "http://www.microsoft.com"
+                            },
+                            {
+                                "parameterName": "Append",
+                                "parameterValue": "/as"
+                            },
+                            {
+                                "parameterName": "PageHash",
+                                "parameterValue": "/NPH"
+                            },
+                            {
+                                "parameterName": "FileDigest",
+                                "parameterValue": "/fd sha256"
+                            },
+                            {
+                                "parameterName": "TimeStamp",
+                                "parameterValue": "/tr \"http://rfc3161.gtm.corp.microsoft.com/TSS/HttpTspServer\" /td sha256"
+                            }
+                        ],
+                        "ToolName": "sign",
+                        "ToolVersion": "1.0"
+                    },
+                    {
+                        "KeyCode": "CP-230012",
+                        "OperationSetCode": "SigntoolVerify",
+                        "Parameters": [
+                            {
+                                "parameterName": "VerifyAll",
+                                "parameterValue": "/all"
+                            }
+                        ],
+                        "ToolName": "sign",
+                        "ToolVersion": "1.0"
+                    }
+                ]
+            }
+        },
+        {
+            "MatchedPath": [
+                "*.ps1"
             ],
-            "ToolName": "sign",
-            "ToolVersion": "1.0"
-          }
-        ]
-      }
-    }
-  ]
+            "SigningInfo": {
+                "Operations": [
+                    {
+                        "KeyCode": "CP-230856",
+                        "OperationSetCode": "SigntoolSign",
+                        "parameters": [
+                            {
+                                "parameterName": "OpusName",
+                                "parameterValue": "Microsoft"
+                            },
+                            {
+                                "parameterName": "OpusInfo",
+                                "parameterValue": "http://www.microsoft.com"
+                            },
+                            {
+                                "parameterName": "PageHash",
+                                "parameterValue": "/NPH"
+                            },
+                            {
+                                "parameterName": "TimeStamp",
+                                "parameterValue": "/t \"http://ts2048.gtm.microsoft.com/TSS/AuthenticodeTS\""
+                            }
+                        ],
+                        "ToolName": "sign",
+                        "ToolVersion": "1.0"
+                    },
+                    {
+                        "KeyCode": "CP-230856",
+                        "OperationSetCode": "SigntoolVerify",
+                        "Parameters": [
+                            {
+                                "parameterName": "VerifyAll",
+                                "parameterValue": "/all"
+                            }
+                        ],
+                        "ToolName": "sign",
+                        "ToolVersion": "1.0"
+                    }
+                ]
+            }
+        }
+    ]
 }
