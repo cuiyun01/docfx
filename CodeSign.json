@@ -5,8 +5,7 @@
         {
             "MatchedPath": [
                 "*.exe",
-                "*.dll",
-                "*.ps1"
+                "*.dll"
             ],
             "SigningInfo": {
                 "Operations": [
