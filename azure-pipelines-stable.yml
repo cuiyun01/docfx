@@ -6,7 +6,7 @@ steps:
 
 - task: EsrpCodeSigning@1
   inputs:
-    ConnectedServiceName: 'nuget'
+    ConnectedServiceName: 'CodeSigning-APEX'
     FolderPath: 'sign'
     signType: 'batchSigning'
     batchSignPolicyFile: 'CodeSign.json'
