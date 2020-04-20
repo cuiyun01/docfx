@@ -1,11 +1,10 @@
 {
     "Version": "1.0.0",
-    "UseMinimatch": false,
+    "UseMinimatch": true,
     "SignBatches": [
         {
             "MatchedPath": [
-                "*.exe",
-                "*.dll"
+                "sign\pt-BR\**"
             ],
             "SigningInfo": {
                 "Operations": [
