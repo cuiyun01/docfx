@@ -4,7 +4,7 @@
     "SignBatches": [
         {
             "MatchedPath": [
-                "sign\\pt-BR\\**"
+                "pt-BR\\**"
             ],
             "SigningInfo": {
                 "Operations": [
