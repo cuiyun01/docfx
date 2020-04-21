@@ -4,7 +4,8 @@
     "SignBatches": [
         {
             "MatchedPath": [
-                "it\\*.dll"
+                "it\\*.dll",
+                "it\\*.ps1"
             ],
             "SigningInfo": {
                 "Operations": [
